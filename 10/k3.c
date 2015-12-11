@@ -4,19 +4,16 @@ int main() {
     freopen("input.txt", "r", stdin);
     //freopen("output.txt", "w", stdout);
  
-	long int r, a, b, c, d;
-    scanf("%ld %ld %ld %ld", &a, &b, &c, &d);
+	long long r, a, b, c, d;
+    scanf("%lld %lld %lld %lld", &a, &b, &c, &d);
  
-    short x, from = -100, to = 100;
-    short cnt = 0;
+    long long x, from = -100, to = 100;
      
     for (x = from; x <= to; x++) {
-        r = 1l*a*x*x*x + 1l*b*x*x + 1l*c*x + 1l*d;
-        //printf("%hd : %ld*x^3 + %ld*x^2 + %ld*x + %ld = %ld\n", x, a, b, c, d, r);
-        if (r == 0) {
-            printf("%s%hd", (cnt == 0) ? "" : " ", x);
-            cnt++;
-        }
+        r = a*x*x*x + b*x*x + c*x + d;
+        //printf("%ld : %d*x^3 + %d*x^2 + %d*x + %d = %lld\n", x, a, b, c, d, r);
+        if (r == 0)
+			printf("%lld ", x);
     }
  
     return 0;
