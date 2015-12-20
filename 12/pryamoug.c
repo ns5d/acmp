@@ -28,7 +28,7 @@ int is_in(int a[0]) {
  
 int main() {
     freopen("input.txt","r",stdin);
-    freopen("output.txt","w",stdout);
+    //freopen("output.txt","w",stdout);
 
     int N = 1001;
     int cnt;
